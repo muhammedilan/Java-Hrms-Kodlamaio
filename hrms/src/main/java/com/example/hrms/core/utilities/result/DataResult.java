@@ -8,6 +8,7 @@ public class DataResult<D> extends Result{
 		super(message, success);
 		this.data = data;
 	}
+	
 
 	public D getData() {
 		return this.data;

@@ -37,4 +37,10 @@ public class EmployersManager implements EmployersService {
 		return new SuccessDataResult<List<Employers>>(this.employersDao.findAll(), "İş Verenler Listelendi");
 	}
 
+	@Override
+	public DataResult<Employers> add(Employers employers) {
+		return new SuccessDataResult<Employers>(this.employersDao.save(employers),"İş İlanı eklenmiştir");
+	}
+
+
 }
